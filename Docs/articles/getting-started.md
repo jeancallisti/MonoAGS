@@ -49,9 +49,22 @@ It is recommended, for now, that you modify the demo game for developing your ga
 
 Right click the solution in the solution explorer, and create a new folder with your game (this is not mandatory, but recommended for better organization). Right click the folder and click to "Add a new project".
 This gives you a window with selection of a lot of templates which you can use.
-You'll need to do this 3 times and create 3 projects: a shared project (multi-platform), a console project (.Net, this is the desktop project, only required if you want your game to run on desktop) and an Android App (only required if you want your game to run on android).
-Add references from the desktop and android projects to the shared project, AGS.API and AGS.Engine (to add references, there should be a references node under the project in the solution explorer, right click it and click on add a reference, which will show the list of project to choose from). Also add a reference to AGS.Engine.Desktop from the desktop project and to AGS.Engine.Android from the android project.
-Then copy the boilerplate code from the DemoQuest.Desktop and DemoQuest.Android to your desktop and android projects and whatever code you want from the DemoQuest shared project to your shared project.
+
+You'll need to do this 3 times and create 3 projects: 
+- a shared project (multi-platform), 
+- a console project (.Net, this is the desktop project, only required if you want your game to run on desktop)
+- an Android App (only required if you want your game to run on android).
+
+Now, add the references:
+- From the desktop project, add references to : 
+   - the shared project, 
+   - AGS.API 
+   - AGS.Engine
+   - AGS.Engine.Desktop
+(to add references, there should be a references node under the project in the solution explorer, right click it and click on add a reference, which will show the list of project to choose from). 
+- Do the same for the Android project, except the reference should not be to AGS.Engine.Desktop, but to AGS.Engine.Android instead.
+
+Finally, copy the boilerplate code from the DemoQuest.Desktop and DemoQuest.Android to your desktop and android projects and whatever code you want from the DemoQuest shared project to your shared project.
 
 ## Coding your game:
 
